@@ -1,11 +1,11 @@
 # 2. Получить список всех чисел Фибоначчи на отрезке [a, b].
-def fibonacci_numbers(localMax):
+def _fibonacci_numbers(localMax):
     if localMax == 0:
         return 0
     elif localMax == 1:
         return 1
     else:
-        return fibonacci_numbers(localMax - 1) + fibonacci_numbers(localMax - 2)
+        return _fibonacci_numbers(localMax - 1) + _fibonacci_numbers(localMax - 2)
 
 def cutByRangeFibonacci(a, b):
     print("get the Fibonacci numbers in a range: ")
@@ -18,5 +18,5 @@ def cutByRangeFibonacci(a, b):
     print("Your range is : [ %s, %s ] " % (a, b)) 
 
     for i in range(1, b + 1):
-        tempFibonacciList.append(fibonacci_numbers(i))
+        tempFibonacciList.append(_fibonacci_numbers(i))
     return tempFibonacciList[a:b]

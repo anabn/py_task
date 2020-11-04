@@ -58,6 +58,13 @@ class Binary_search_tree:
         else:
             return None
 
+    def search(self, value):
+        if self.root!=None:
+            return self._find(value, self.root)
+        else:
+            return False
+
+
     def _find(self, value, currentNode):
         if value ==currentNode.value:
             return currentNode
