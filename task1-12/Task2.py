@@ -10,14 +10,13 @@ def fibonacci_numbers(localMax):
 def cutByRangeFibonacci(a, b):
     print("get the Fibonacci numbers in a range: ")
     tempFibonacciList = []
-    if a < b:
-        print("Your range is : [ " + str(a) + ", " + str(b) + " ] ")
-        for i in range(1, b + 1):
-            tempFibonacciList.append(fibonacci_numbers(i))
-    elif b < a:
-        print("Your range is : [ " + str(b) + ", " + str(a) + " ] ")
-        for i in range(1, b + 1):
-            tempFibonacciList.append(fibonacci_numbers(i))
-    else:
-        print("It's not a range: " + str(a) + " == " + str(b))
+    if b < a:
+        a, b = b, a
+    elif a == b:
+        print("It's not a range: {a} == {b}".format(a = a , b = b))
+        return []
+    print("Your range is : [ %s, %s ] " % (a, b)) 
+
+    for i in range(1, b + 1):
+        tempFibonacciList.append(fibonacci_numbers(i))
     return tempFibonacciList[a:b]

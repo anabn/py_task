@@ -3,7 +3,7 @@ from GeneralFigure import GeneralFigure
 
 class Square(GeneralFigure):
     def __init__(self, color, a):
-        super().__init__(color)
+        GeneralFigure.__init__(self, color)
         self.a = a
 
     def area(self):

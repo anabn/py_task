@@ -3,7 +3,7 @@ from GeneralFigure import GeneralFigure
 
 class Circle(GeneralFigure):
     def __init__(self, color, radius):
-        super().__init__(color)
+        GeneralFigure.__init__(self, color)
         self.radius = radius
 
     def area(self):

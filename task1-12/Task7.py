@@ -1,12 +1,6 @@
 # 7. Найти минимальный элемент, значение и индекс.
+import operator
 def array_min(localArray):
-    min = 0
-    if len(localArray) == 0:
-        return min
-    else:
-        for i in localArray:
-            if (isinstance(i, int) | isinstance(i, float)):
-                if i <= min:
-                    min = i
-    answer = [min, localArray.index(min)]
-    return answer
+    array = list(filter(lambda x: isinstance(x, int) | isinstance(x, float), localArray))
+    index, value = min(enumerate(array), key=operator.itemgetter(1)) 
+    return [index, value]

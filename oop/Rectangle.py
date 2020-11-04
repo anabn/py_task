@@ -3,7 +3,7 @@ from GeneralFigure import GeneralFigure
 
 class Rectangle(GeneralFigure):
     def __init__(self, color, a, b):
-        super().__init__(color)
+        GeneralFigure.__init__(self, color)
         self.a = a
         self.b = b
 

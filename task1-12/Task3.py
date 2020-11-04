@@ -7,9 +7,9 @@ def functionInRequest(paramA, paramB):
     try:
         if isinstance(paramA, int) & isinstance(paramB, int):
             if paramA > paramB:
-                print("our parameters are int; the bigger is : " + str(paramA))
+                print("our parameters are int; the bigger is : %s" % paramA)
             elif paramB > paramA:
-                print("our parameters are int; the bigger is : " + str(paramB))
+                print("our parameters are int; the bigger is : %s" % paramB)
             else:
                 print("our parameters are int and this parameters are equals")
         elif isinstance(paramA, str) & isinstance(paramB, str):

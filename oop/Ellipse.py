@@ -3,7 +3,7 @@ from GeneralFigure import GeneralFigure
 
 class Ellipse(GeneralFigure):
     def __init__(self, color, exalA, exalB):
-        super().__init__(color)
+        GeneralFigure.__init__(self, color)
         self.exalA = exalA
         self.exalB = exalB
 

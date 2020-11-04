@@ -5,7 +5,7 @@ from GeneralFigure import GeneralFigure
 
 class Triangle(GeneralFigure):
     def __init__(self, color, a, b, c):
-        super().__init__(color)
+        GeneralFigure.__init__(self, color)
         self.a = a
         self.b = b
         self.c = c
